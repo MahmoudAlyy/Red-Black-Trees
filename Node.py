@@ -1,14 +1,19 @@
 class Node:
     """ red black tree node class """
-    RED = 'red'
-    BLACK = 'black'
 
-    def __init__(self, value=0, color=RED, parent=None, right=None, left=None):
+    def __init__(self, value):
         self.value = value
-        self.color = color
-        self.parent = parent
-        self.right = right
-        self.left = left
+        self.red = True # if false then black
+        self.parent = None
+        self.right = Nil
+        self.left = Nil
 
-    def f(self):
-        return 'hello world from Node'
+    def printNode(self):
+        print(self.value,self.red)
+
+class Nil:
+    value = None
+    red = False # if false then black
+    parent = None
+    right = None
+    left = None
