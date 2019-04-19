@@ -16,8 +16,15 @@ def main():
     tree = RBTree()
     with open('English_Dictionary.txt','r') as fileobject:
         for line in fileobject:
+            line="".join(line.split())
             tree.insert(line)
-    postorder(tree.root)
+    #postorder(tree.root)
+    if tree.search('a')==1:
+        print('yes')
+    else:
+        print('no')
+    tree.insert('newWord')
+    tree.insert('newWord')
 if __name__ == "__main__":
     """ This is executed when run from the command line """
     main()
