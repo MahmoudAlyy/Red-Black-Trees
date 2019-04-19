@@ -7,7 +7,7 @@ class RBTree:
 
     def insert(self , value):
         node = Node(value)
-
+        #node.printNode()
         #if tree empty
         if self.root == None:
             self.root = node
@@ -29,7 +29,6 @@ class RBTree:
             node.parent.left = node
         else:
             node.parent.right = node
-
         fixme(self,node)
         #self.root.red = False
         return

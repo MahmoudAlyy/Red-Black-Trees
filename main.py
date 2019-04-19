@@ -1,6 +1,7 @@
 from Tree import *
 from Node import *
 from tree_height import *
+from Traversal import *
 """
 Module Docstring
 """
@@ -13,21 +14,10 @@ __license__ = "MIT"
 def main():
     """ Main entry point of the app """
     tree = RBTree()
-    tree.insert(47)
-    tree.insert(32)
-    tree.insert(71)
-    tree.insert(93)
-    tree.insert(65)
-    tree.insert(82)
-    tree.insert(87)
-    tree.root.printNode()
-    tree.root.left.printNode()
-    tree.root.right.printNode()
-    tree.root.right.left.printNode()
-    tree.root.right.right.printNode()
-    tree.root.right.right.left.printNode()
-    tree.root.right.right.right.printNode()
-
+    with open('English_Dictionary.txt','r') as fileobject:
+        for line in fileobject:
+            tree.insert(line)
+    postorder(tree.root)
 if __name__ == "__main__":
     """ This is executed when run from the command line """
     main()
