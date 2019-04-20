@@ -1,4 +1,3 @@
-from tree_height import *
 class Node:
     """ red black tree node class """
 
@@ -10,10 +9,20 @@ class Node:
         self.left = Nil
 
     def printNode(self):
-        print(self.value , tree_height(self))                
-class Nil:
+        print(self.value,end = ' ')
+        if self.red ==True :
+            print("RED")
+        else :
+            print("BLACK")
+class Nil():
     value = None
     red = False # if false then black
     parent = None
     right = None
     left = None
+    def printNode(self):
+        print(self.value,end = ' ')
+        if self.red ==True :
+            print("RED")
+        else :
+            print("BLACK")
