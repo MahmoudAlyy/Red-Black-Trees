@@ -12,6 +12,7 @@ def inOrderSuccessor(node): # Normal Successor
         return node
 
 """
+
 def inOrderSuccessor(node):  # predecessor for testing
     if node.left != Nil:
         succ = node.left
@@ -21,6 +22,6 @@ def inOrderSuccessor(node):  # predecessor for testing
     else:
         return node
 
-def replaceV2 (source , target): 
-    target.value = source.value
 
+def replaceV2(source, target):
+    target.value = source.value
