@@ -36,30 +36,29 @@ def main():
     """
     #ngm's test input
     tree = RBTree()
-    tree.insert(12)
-    tree.insert(5)
+    tree.insert(50)
+    tree.insert(20)
+    tree.insert(70)
+    tree.insert(65)
+    tree.insert(75) 
+
     tree.insert(15)
-    """
-    tree.insert(3)
-    tree.insert(10)
-    tree.insert(13)
-    tree.insert(17)
-    tree.insert(4)
-    tree.insert(7)
-    tree.insert(11)
-    tree.insert(14)
-    tree.insert(6)
-    tree.insert(8)
-    """
+    tree.insert(21)
+    tree.insert(29)
+    tree.insert(51)
+    tree.insert(56)
+    tree.insert(76)
+    tree.insert(80)
+ 
+    print("START**********************************")
     tree.printTree()      # el none el hwa el Nil w el $ dah eli hwa mfish y3ni
 
-    print("#################################")
+    print("END#################################")
 
-    test = tree.searchAndReturn(5)
-    #inOrderSuccessor(test).printNode()
-    DelMe(test)
+    del_test = tree.searchAndReturn(29)
+    DelMe(tree,del_test)
+
     tree.printTree()
-    #tree.root.left.printNode()
 
 if __name__ == "__main__":
     """ This is executed when run from the command line """

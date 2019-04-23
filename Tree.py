@@ -15,7 +15,7 @@ class RBTree:
         while(current != Nil):
             if key == current.value:
                 return 1
-            if key > current.value:
+            if key > current.value :
                 current=current.right
             else:
                 current=current.left
@@ -103,6 +103,7 @@ class RBTree:
                             nextCount += 1
                         else:
                             buf.append(None)
+                         
                 else:
                     output.append('$')
                 if not count:

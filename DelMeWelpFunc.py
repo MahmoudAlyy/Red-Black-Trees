@@ -1,5 +1,8 @@
 from Node import *
-def inOrderSuccessor(node): #ezi
+from Tree import *
+
+"""
+def inOrderSuccessor(node): # Normal Successor
     if node.right != Nil:
         succ = node.right
         while succ.left != Nil :
@@ -7,11 +10,17 @@ def inOrderSuccessor(node): #ezi
         return succ
     else :
         return node
+
 """
-def replace (soruce , target):
-    if target = target.parent.left :
-        p = target
-    p = target.parent
-    l = target.left
-    r = targe.right
-"""
+def inOrderSuccessor(node):  # predecessor for testing
+    if node.left != Nil:
+        succ = node.left
+        while succ.right != Nil:
+            succ = succ.right
+        return succ
+    else:
+        return node
+
+def replaceV2 (source , target): 
+    target.value = source.value
+

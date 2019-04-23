@@ -7,6 +7,7 @@ class Node:
         self.parent = None
         self.right = Nil
         self.left = Nil
+        
 
     def printNode(self):
         print(self.value,end = ' ')
@@ -14,12 +15,14 @@ class Node:
             print("RED")
         else :
             print("BLACK")
-class Nil():
+class Nil:
     value = None
-    red = False # if false then black
-    parent = None
+    red = False  # if false then black
     right = None
     left = None
+    parent = None
+           
+
     def printNode(self):
         print(self.value,end = ' ')
         if self.red ==True :
