@@ -14,7 +14,7 @@ __license__ = "MIT"
 
 
 def main():
-
+    
     tree = RBTree()
     while(1):
         s = input('================================\nPlease select a number that resmbles one of the following tasks:\n 1)Load Dictionary \n 2)Print Doctionary Size \n 3)Insert a word \n 4)Lookup a word \n 5)Delete a word\n 6)Exit\n')
@@ -41,6 +41,29 @@ def main():
             DelMe(tree, x)
         else:
             break
+    
+    """
+    tree = RBTree()
+    tree.insert(50)
+    tree.insert(40)
+    tree.insert(70)
+    tree.insert(80)
+    tree.insert(45)
+    tree.insert(60)
+    print("START")
+    tree.printTree()
+
+    test = tree.searchAndReturn(70)
+    DelMe(tree , test)
+    tree.printTree()
+    test = tree.searchAndReturn(40)
+    DelMe(tree, test)
+    test = tree.searchAndReturn(50)
+    DelMe(tree, test)
+
+    print("END")
+    tree.printTree()
+    """
 
 if __name__ == "__main__":
     """ This is executed when run from the command line """

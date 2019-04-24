@@ -64,7 +64,7 @@ class RBTree:
         else:
             node.parent.right = node
         fixme(self, node)
-        print(self.getSize())
+        #print(self.getSize())
         return
 
     def getSize(self):
@@ -76,7 +76,7 @@ class RBTree:
         buf = deque()
         output = []
         if not root:
-            print('$')
+            print('empty')
         else:
             buf.append(root)
             count, nextCount = 1, 0
@@ -105,5 +105,5 @@ class RBTree:
                     output = []
                     count, nextCount = nextCount, 0
             # print the remaining all empty leaf node part
-            output.extend(['$']*len(buf))
-            print(output)
+            #output.extend(['$']*len(buf))
+            #print(output)

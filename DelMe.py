@@ -9,7 +9,7 @@ def DelMe(tree, node):
     succ.printNode()
     replaceV2(succ, node)
     dd = None
-
+    
     if succ.red == True:  # case 1 : Node red  #red nodes always have black chil
         if succ.right != Nil:
             succ.value = succ.right.value  # value
@@ -89,7 +89,7 @@ def Doulbe_Black(tree, dd):
             print("case 3")
         # case 3
 
-        if (dd.parent.red == True and sib.red == False and sib.left.red == False and sib.right.red == False):
+        elif (dd.parent.red == True and sib.red == False and sib.left.red == False and sib.right.red == False):
             dd.parent.red = False
             sib.red = True
             print("Terminal case 4")
@@ -98,7 +98,7 @@ def Doulbe_Black(tree, dd):
 
         # case 2,5,6 are rotating (also have recoloring) cases so they deped on dd position relative to its parent
 
-        if dd == dd.parent.left:  # dd is a left child
+        elif dd == dd.parent.left:  # dd is a left child
 
             if (dd. parent.red == False and sib.red == True):
                 dd.parent.red = True
@@ -107,14 +107,14 @@ def Doulbe_Black(tree, dd):
                 print("case 2 , dd is left")
             # case 2
 
-            if (dd.parent.red == False and sib.red == False and (sib.left.red == True and sib.right.red == False)):
+            elif (dd.parent.red == False and sib.red == False and (sib.left.red == True and sib.right.red == False)):
                sib.left.red = False
                sib.red = True
                right_rotate(tree, sib)
                print("case 5 , dd is left")
             # case 5
 
-            if sib.red == False and (sib.right.red == True):
+            elif sib.red == False and (sib.right.red == True):
                 sib.red = sib.parent.red
                 sib.parent.red = False
                 sib.right.red = False
@@ -132,14 +132,14 @@ def Doulbe_Black(tree, dd):
                 print("case 2 , dd is right")
             # case 2
 
-            if (dd.parent.red == False and sib.red == False and (sib.right.red == True and sib.left.red == False)):
+            elif (dd.parent.red == False and sib.red == False and (sib.right.red == True and sib.left.red == False)):
                sib.right.red = False
                sib.red = True
                left_rotate(tree, sib)
                print("case 5 , dd is right")
             # case 5
 
-            if sib.red == False and (sib.left.red == True):
+            elif sib.red == False and (sib.left.red == True):
                 sib.red = sib.parent.red
                 sib.parent.red = False
                 sib.left.red = False
