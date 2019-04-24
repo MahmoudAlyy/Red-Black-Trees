@@ -4,6 +4,9 @@ from DelMeWelpFunc import *
 
 
 def DelMe(tree, node):
+    if node.value == None :
+        print('ERROR!Word doesn\'t exist in the tree\n')
+        return
     succ = inOrderSuccessor(node)
     print("succ is ")
     succ.printNode()
@@ -62,6 +65,8 @@ def DelMe(tree, node):
               dd.parent.value, "dd.parent.right.value = ", dd.parent.right.value)
         Doulbe_Black(tree, dd)
     tree.size-=1
+    print("Size is ")
+    print(tree.getSize())
 
 
 def Doulbe_Black(tree, dd):
