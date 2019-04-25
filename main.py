@@ -17,7 +17,7 @@ def main():
 
     tree = RBTree()
     while(1):
-        s = input('================================\nPlease select a number that resmbles one of the following tasks:\n 1)Load Dictionary \n 2)Print Doctionary Size \n 3)Insert a word \n 4)Lookup a word \n 5)Delete a word\n Press any other key to Exit\n')
+        s = input('================================\nPlease select a number that resemble one of the following tasks:\n 1)Load Dictionary \n 2)Print Doctionary Size \n 3)Insert a word \n 4)Lookup a word \n 5)Delete a word\n 6)Print Tree Height \n 7)Press any other key to Exit\n')
         if s == '1':
             filename = input('Please enter the filename:')
             with open(filename, 'r') as fileobject:
@@ -38,9 +38,15 @@ def main():
             else:
                 print('Not Found')
         elif s == '5':
-            key = input('Please neter the word you wish to delete:')
+            key = input('Please enter the word you wish to delete:')
             x = tree.searchAndReturn(key)
-            DelMe(tree, x)
+            if x != Nil :
+                DelMe(tree, x)
+            else :
+                print('Word not found , cannot delete')    
+        elif s == '6':
+            h = tree_height(tree.root)
+            print('Tree Height = ',h)
         else:
             break
 
